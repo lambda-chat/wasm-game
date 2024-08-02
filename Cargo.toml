@@ -1,5 +1,5 @@
 [package]
-name = "warm-puzzle"
+name = "wasm-puzzle"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,4 +9,8 @@ crate-type = ["cdylib", "rlib"]
 [dependencies]
 js-sys = "0.3.69"
 wasm-bindgen = "0.2.92"
-web-sys = { version = "0.3.69", features = ["Window", "console"] }
+console_error_panic_hook = "0.1.7"
+web-sys = { version = "0.3.69", features = ["Window", "Document", "Element", "HtmlCanvasElement", "CanvasRenderingContext2d"] }
+
+[target."cfg(debug_assertions)".dependencies]
+console_error_panic_hook = "0.1.5"
