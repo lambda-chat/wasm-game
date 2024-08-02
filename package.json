@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "web": "cd web && npm run dev",
+        "start": "npm run build && cd web && npm run dev",
+        "build": "wasm-pack build --target web --out-dir web/pkg",
+        "login": "wasm-pack login",
+        "pack": "wasm-pack pack web/pkg",
+        "publish": "wasm-pack publish"
+    }
+}
